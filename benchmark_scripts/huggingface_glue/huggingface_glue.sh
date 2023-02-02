@@ -1,4 +1,4 @@
-export TASK_NAME=mrpc
+export TASK_NAME=cola
 
 python huggingface_glue.py \
   --model_name_or_path bert-base-cased \
@@ -12,6 +12,7 @@ python huggingface_glue.py \
   --output_dir ./ignore/$TASK_NAME/ \
   --overwrite_output_dir
 
+#### mrpc ####
 # Train in the docker container 
 # real    2m25.427s
 # user    2m4.445s
@@ -21,3 +22,13 @@ python huggingface_glue.py \
 # real    2m25,923s
 # user    2m6,226s
 # sys     0m14,957s
+
+#### cola ####
+# Train in the docker container
+# real    5m25.859s
+# user    4m41.824s
+# sys     0m37.221s
+# Train on the real machine
+# real    5m24,505s
+# user    4m44,832s
+# sys     0m33,028s
